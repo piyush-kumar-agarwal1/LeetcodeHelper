@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Helper</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>LeetCode Helper</h1>
+      <button id="darkModeToggle">🌓</button>
+    </div>
+    
+    <div id="problemInfo">
+      <h2 id="problemTitle">Loading problem...</h2>
+      <div id="problemDifficulty"></div>
+    </div>
+    
+    <div id="hintsContainer">
+      <div id="hintsList"></div>
+      <button id="getHintBtn" class="primary-btn">Get Hint</button>
+      <button id="getSolutionBtn" class="solution-btn" disabled>Get Solution</button>
+    </div>
+    
+    <div id="noDetection" class="hidden">
+      <p>No LeetCode problem detected. Please navigate to a LeetCode problem page.</p>
+    </div>
+    
+    <div id="apiKeyPrompt" class="hidden">
+      <p>Please enter your API key to use LeetCode Helper:</p>
+      <input type="text" id="apiKeyInput" placeholder="Your API Key">
+      <button id="saveApiKey" class="primary-btn">Save</button>
+    </div>
+    
+    <div class="footer">
+      <p>LeetCode Helper v1.0.0</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

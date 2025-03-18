@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --hint-bg-color: #f0f5fa;
+  --disabled-color: #bdc3c7;
+  --success-color: #2ecc71;
+}
+
+body.dark-mode {
+  --primary-color: #34495e;
+  --secondary-color: #3498db;
+  --text-color: #ecf0f1;
+  --background-color: #1a1a1a;
+  --hint-bg-color: #2c3e50;
+  --disabled-color: #7f8c8d;
+  --success-color: #27ae60;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.container {
+  width: 350px;
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+#problemInfo {
+  margin-bottom: 15px;
+}
+
+#problemTitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+#problemDifficulty {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+#hintsContainer {
+  margin-bottom: 20px;
+}
+
+.hint {
+  background-color: var(--hint-bg-color);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.primary-btn, .solution-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #2980b9;
+}
+
+.primary-btn:disabled, .solution-btn:disabled {
+  background-color: var(--disabled-color);
+  cursor: not-allowed;
+}
+
+.solution-btn {
+  background-color: var(--success-color);
+  margin-left: 10px;
+}
+
+.solution-btn:hover:not(:disabled) {
+  background-color: #27ae60;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--disabled-color);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid var(--disabled-color);
+  border-radius: 4px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}   
